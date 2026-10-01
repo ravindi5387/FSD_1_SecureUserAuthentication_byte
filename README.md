@@ -109,6 +109,31 @@ Authorization: Bearer JWT_TOKEN
 ## HTTP status codes
 `200 OK`, `201 Created`, `400 Bad Request`, `401 Unauthorized`, `409 Conflict`, `404 Not Found`, `500 Internal Server Error`.
 
+## Screenshots
+
+### Registration
+![Registration](screenshots/01-registration.png)
+
+### Registration Success
+![Registration Success](screenshots/02-registration-success.png)
+
+### Login Success
+![Login Success](screenshots/03-login-success.png)
+
+### Protected Dashboard
+![Protected Dashboard](screenshots/04-dashboard.png)
+
+### Authenticated Protected Endpoint
+![Authenticated Endpoint](screenshots/05-protected-endpoint-authenticated.png)
+
+### Unauthorized Request
+![Unauthorized Request](screenshots/06-protected-endpoint-unauthorized.png)
+
+### Validation Error
+![Validation Error](screenshots/07-validation-error.png)
+
+### Password Hashing
+![Password Hashing](screenshots/08-database-password-hash.png)
 
 ## Internship deliverables
 - [x] Registration
