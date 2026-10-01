@@ -8,6 +8,37 @@ Full Stack Development internship project implementing registration, login, bcry
 - bcryptjs + jsonwebtoken + Zod
 - React + TypeScript + Vite + Axios
 
+## System Architecture
+
+The application follows a client-server architecture:
+
+```text
+React + TypeScript
+        |
+      REST API
+        |
+Node.js + Express + TypeScript
+        |
+   JWT Authentication
+        |
+      bcrypt
+        |
+    PostgreSQL
+```
+
+## Authentication Flow
+
+1. User submits registration details.
+2. Server validates the input.
+3. Password is hashed using bcrypt.
+4. User data is stored in PostgreSQL.
+5. User logs in using email and password.
+6. Server verifies the password hash.
+7. Server generates a JWT.
+8. Client sends the JWT as a Bearer token.
+9. Protected endpoints validate the token before returning data.
+
+    
 ## Setup
 
 ### Database
@@ -46,17 +77,17 @@ Frontend: `http://localhost:5173`
 ### Register
 ```json
 {
-  "name": "Ravindi Perera",
-  "email": "ravindi@example.com",
-  "password": "SecurePass123!"
+  "name": "Jane Doe",
+  "email": "user@example.com",
+  "password": "StrongPassword123!"
 }
 ```
 
 ### Login
 ```json
 {
-  "email": "ravindi@example.com",
-  "password": "SecurePass123!"
+ "email": "user@example.com",
+  "password": "StrongPassword123!"
 }
 ```
 
@@ -77,6 +108,7 @@ Authorization: Bearer JWT_TOKEN
 
 ## HTTP status codes
 `200 OK`, `201 Created`, `400 Bad Request`, `401 Unauthorized`, `409 Conflict`, `404 Not Found`, `500 Internal Server Error`.
+
 
 ## Internship deliverables
 - [x] Registration
