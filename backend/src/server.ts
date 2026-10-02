@@ -5,7 +5,9 @@ import { testDatabaseConnection } from "./config/db";
 async function start() {
   try {
     await testDatabaseConnection();
-    app.listen(env.port, () => console.log(`API running on http://localhost:${env.port}`));
+    app.listen(env.port, "0.0.0.0", () => {
+      console.log(`API running on port ${env.port}`);
+    });
   } catch (error) {
     console.error("Failed to start server:", error);
     process.exit(1);
